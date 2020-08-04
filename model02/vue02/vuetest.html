@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <input type="text" v-model="age">
+    <button @click="age++">添加</button>
+
+     <table v-for="u in user">
+         <tr>
+         <td>{{u.name}}</td>
+             <td>{{u.ages}}</td>
+             <td>{{u.sex}}</td>
+         </tr>
+     </table>
+
+</div>
+
+
+</body>
+<script type="application/javascript">
+    var app=new Vue({
+        el:"#app",
+
+        data:{
+               age:16,
+            user:[
+                {name:"张三",ages:"age",sex:"男"},
+                {name:"王五",ages:"age",sex:"男"}
+
+            ]
+        }
+    });
+
+</script>
+</html>
